@@ -4,10 +4,8 @@
 
 #define N 20
 #define INF 100000000
-#define max(a, b) ((a) > (b) ? (a) : (b))
-#define min(a, b) ((a) < (b) ? (a) : (b))
-#define abs(a) ((a) < 0 ? -(a) : (a))
-#define eq(a, b) (abs((a) - (b)) < 0.000001)
+#define max(a, b) (((a) > (b)) ? (a) : (b))
+#define min(a, b) (((a) < (b)) ? (a) : (b))
 
 double cost[N][N];
 int n, max_match;
@@ -24,11 +22,14 @@ void augment();
 void update_labels();
 double hungarian();
 void add_to_tree(int x, double prevx);
+double abs(double);
+bool eq(double, double);
 
 int main()
 {
     int banks;
     int cruisers;
+
     while (1)
     {
         scanf("%d %d",&banks, &cruisers);
@@ -196,5 +197,14 @@ double hungarian()
         ret += cost[x][xy[x]];
 
     return ret;
+}
+
+bool eq(double a, double b) {
+    return abs(a - b) < 0.00001;
+}
+
+double abs(double a) {
+    if(a < 0) return -a;
+    return a;
 }
 
