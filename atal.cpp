@@ -7,7 +7,7 @@
 #define max(a, b) ((a) > (b) ? (a) : (b))
 #define min(a, b) ((a) < (b) ? (a) : (b))
 
-float cost[N][N];
+int cost[N][N];
 int n, max_match;
 int lx[N], ly[N];
 int xy[N];
@@ -42,8 +42,9 @@ int main()
         {
             for (int j = 0; j < cruisers; j++)
             {
-                scanf("%f", &cost[i][j]);
-                cost[i][j] *= -1;
+                float num;
+                scanf("%f", &num);
+                cost[i][j] = (int) -100 * num;
             }
         }
 
@@ -58,7 +59,7 @@ int main()
             }
         }
 
-        float average = floor(hungarian()/n);
+        float average = -floor(((float) hungarian()) /n) / 100.0;
         printf("%.2lf\n", average);
     }
 
