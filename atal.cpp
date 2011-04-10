@@ -2,7 +2,7 @@
 #include <cmath>
 #include <cstring>
 
-#define N 55
+#define N 20
 #define INF 100000000
 #define max(a, b) ((a) > (b) ? (a) : (b))
 #define min(a, b) ((a) < (b) ? (a) : (b))
@@ -59,7 +59,7 @@ int main()
             }
         }
 
-        double average = -floor(hungarian()/n);
+        double average = floor(-(100.0 * hungarian() / n)) / 100.0;
 
         printf("%.2lf\n", average);
     }
