@@ -60,7 +60,9 @@ int main()
             }
         }
 
-        double average = floor(-(100.0 * hungarian() / banks)) / 100.0;
+        double average = -(100.0 * hungarian() / banks) / 100.0;
+
+        average = floor(average * 100 + 0.5) / 100.0;
 
         printf("%.2lf\n", average);
     }
