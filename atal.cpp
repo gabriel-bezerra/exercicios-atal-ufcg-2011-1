@@ -2,26 +2,26 @@
 #include <cmath>
 #include <cstring>
 
-#define N 55
+#define N 5
 #define INF 100000000
 #define max(a, b) ((a) > (b) ? (a) : (b))
 #define min(a, b) ((a) < (b) ? (a) : (b))
 
-float cost[N][N];
-int n, max_match;
-int lx[N], ly[N];
+double cost[N][N];
+double n, max_match;
+double lx[N], ly[N];
 int xy[N];
 int yx[N];
 bool S[N], T[N];
-int slack[N];
-int slackx[N];
-int prev[N];
+double slack[N];
+double slackx[N];
+double prev[N];
 
 void init_labels();
 void augment();
 void update_labels();
-int hungarian();
-void add_to_tree(int x, int prevx);
+double hungarian();
+void add_to_tree(int x, double prevx);
 
 int main()
 {
@@ -42,7 +42,7 @@ int main()
         {
             for (int j = 0; j < cruisers; j++)
             {
-                scanf("%f", &cost[i][j]);
+                scanf("%lf", &cost[i][j]);
                 cost[i][j] *= -1;
             }
         }
@@ -58,7 +58,8 @@ int main()
             }
         }
 
-        float average = floor(hungarian()/n);
+        double average = floor(hungarian()/n);
+
         printf("%.2lf\n", average);
     }
 
@@ -78,7 +79,8 @@ void augment()
 {
     if (max_match == n) return;
     int x, y, root;
-    int q[N], wr = 0, rd = 0;
+    double q[N];
+    int wr = 0, rd = 0;
     memset(S, false, sizeof(S));
     memset(T, false, sizeof(T));
     memset(prev, -1, sizeof(prev));
@@ -151,7 +153,9 @@ void augment()
 
 void update_labels()
 {
-    int x, y, delta = INF;
+    int x, y;
+    double delta = INF;
+
     for (y = 0; y < n; y++)
         if (!T[y])
             delta = min(delta, slack[y]);
@@ -164,7 +168,7 @@ void update_labels()
             slack[y] -= delta;
 }
 
-void add_to_tree(int x, int prevx)
+void add_to_tree(int x, double prevx)
 {
     S[x] = true;
     prev[x] = prevx;
@@ -176,9 +180,9 @@ void add_to_tree(int x, int prevx)
         }
 }
 
-int hungarian()
+double hungarian()
 {
-    int ret = 0;
+    double ret = 0;
     max_match = 0;
     memset(xy, -1, sizeof(xy));
     memset(yx, -1, sizeof(yx));
@@ -188,3 +192,4 @@ int hungarian()
         ret += cost[x][xy[x]];
     return ret;
 }
+
