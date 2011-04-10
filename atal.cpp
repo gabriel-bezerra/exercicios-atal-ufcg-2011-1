@@ -7,7 +7,7 @@
 #define max(a, b) ((a) > (b) ? (a) : (b))
 #define min(a, b) ((a) < (b) ? (a) : (b))
 
-int cost[N][N];
+float cost[N][N];
 int n, max_match;
 int lx[N], ly[N];
 int xy[N];
@@ -25,13 +25,13 @@ void add_to_tree(int x, int prevx);
 
 int main()
 {
+    int banks;
+    int cruisers;
     while (1)
     {
-        int banks;
-        int cruisers;
         scanf("%d %d",&banks, &cruisers);
 
-        if (banks == 0 && cruisers == 0)
+        if (!cruisers)
         {
             break;
         }
@@ -42,7 +42,7 @@ int main()
         {
             for (int j = 0; j < cruisers; j++)
             {
-                scanf("%d", &cost[i][j]);
+                scanf("%f", &cost[i][j]);
                 cost[i][j] *= -1;
             }
         }
