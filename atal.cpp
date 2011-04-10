@@ -59,7 +59,7 @@ int main()
             }
         }
 
-        double average = floor(-(100.0 * hungarian() / n)) / 100.0;
+        double average = floor(-(100.0 * hungarian() / banks)) / 100.0;
 
         printf("%.2lf\n", average);
     }
@@ -191,6 +191,7 @@ double hungarian()
     augment();
     for (int x = 0; x < n; x++)
         ret += cost[x][xy[x]];
+
     return ret;
 }
 
