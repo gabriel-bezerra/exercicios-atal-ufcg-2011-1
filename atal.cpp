@@ -6,7 +6,8 @@
 #define INF 100000000
 #define max(a, b) ((a) > (b) ? (a) : (b))
 #define min(a, b) ((a) < (b) ? (a) : (b))
-#define eq(a, b) ((a) - (b)) < 0.000001
+#define abs(a) ((a) < 0 ? -(a) : (a))
+#define eq(a, b) (abs((a) - (b)) < 0.000001)
 
 double cost[N][N];
 int n, max_match;
@@ -37,7 +38,7 @@ int main()
             break;
         }
 
-        n = max(banks, cruisers);
+        n = cruisers;
 
         for (int i = 0; i < banks; i++)
         {
