@@ -1,3 +1,15 @@
+/*
+ * Código produzido em grupo a partir do tutorial do TopCoder por:
+ *
+ * Catharine Quintans Bezerra
+ * Cleber Gonçalves de Sousa
+ * Gabriel Assis Bezerra
+ * Tiago Almeida Reul
+ *
+ * Referência:
+ * http://www.topcoder.com/tc?module=Static&d1=tutorials&d2=hungarianAlgorithm
+ */
+
 #include <cstdio>
 #include <cmath>
 #include <cstring>
