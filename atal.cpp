@@ -2,13 +2,14 @@
 #include <cmath>
 #include <cstring>
 
-#define N 5
+#define N 55
 #define INF 100000000
 #define max(a, b) ((a) > (b) ? (a) : (b))
 #define min(a, b) ((a) < (b) ? (a) : (b))
+#define eq(a, b) ((a) - (b)) < 0.000001
 
 double cost[N][N];
-double n, max_match;
+int n, max_match;
 double lx[N], ly[N];
 int xy[N];
 int yx[N];
@@ -58,7 +59,7 @@ int main()
             }
         }
 
-        double average = floor(hungarian()/n);
+        double average = -floor(hungarian()/n);
 
         printf("%.2lf\n", average);
     }
@@ -105,7 +106,7 @@ void augment()
         {
             x = q[rd++];
             for (y = 0; y < n; y++)
-                if (cost[x][y] == lx[x] + ly[y] &&  !T[y])
+                if (eq(cost[x][y] , lx[x] + ly[y]) &&  !T[y])
                 {
                     if (yx[y] == -1) break;
                     T[y] = true;
@@ -118,7 +119,7 @@ void augment()
         update_labels();
         wr = rd = 0;
         for (y = 0; y < n; y++)
-            if (!T[y] &&  slack[y] == 0)
+            if (!T[y] &&  eq(slack[y], 0))
             {
                 if (yx[y] == -1)
                 {
