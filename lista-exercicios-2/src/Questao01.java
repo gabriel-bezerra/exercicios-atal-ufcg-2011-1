@@ -22,16 +22,18 @@ public class Questao01 {
     }
 
     private static boolean soma(Vector<Integer> v, int soma, int somaParcial, int quantidade) {
-        if ((somaParcial > soma) || (quantidade < 0))  {
-                return false;
+        if (somaParcial == soma) {
+            return true;
         }
 
-        if (somaParcial == soma) {
-                return true;
+        if ((somaParcial > soma) || (quantidade <= 0))  {
+            return false;
         }
 
         for (int i = 0; i < v.size(); i++) {
-                soma(v, soma, somaParcial + v.get(i), quantidade-1);
+            if (soma(v, soma, somaParcial + v.get(i), quantidade-1)) {
+                return true;
+            }
         }
 
         return false;
