@@ -20,6 +20,16 @@
 
 public class Questao02b {
 
+    private static class No {
+            private int carga;
+            private No proximo;
+
+            private No(int carga, No proximo) {
+                    this.carga = carga;
+                    this.proximo = proximo;
+            }
+    }
+
     /**
      * @param args
      */
@@ -28,4 +38,7 @@ public class Questao02b {
 
     }
 
+    public boolean verificaCiclo(No n) {
+        return false;
+    }
 }
