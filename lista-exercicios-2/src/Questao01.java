@@ -15,6 +15,14 @@ public class Questao01 {
             v.add(17);
             int s = 23;
             System.out.println(verificaSoma(v, s));
+
+            Vector<Integer> v2 = new Vector<Integer>();
+            v2.add(3);
+            v2.add(4);
+            v2.add(6);
+            v2.add(17);
+            int s2 = 30;
+            System.out.println(verificaSoma(v2, s2));
     }
 
     private static boolean verificaSoma(Vector<Integer> v, int soma) {
