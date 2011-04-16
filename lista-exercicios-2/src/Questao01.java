@@ -20,6 +20,11 @@
  * qualquer que seja a forma de varrer a lista, devemos verificar todas as
  * triplas possíveis, resultando num custo O(n^3). 
  * 
+ * Em relação a espaço, o algoritmo possui um custo O(n), devido ao vetor de
+ * entrada, que possui n elementos. Porém, para verificar se ocorre a soma,
+ * desconsiderando o vetor de entrada, o algoritmo possui um custo espacial de
+ * O(1).
+ * 
  */
 
 import java.util.Vector;
