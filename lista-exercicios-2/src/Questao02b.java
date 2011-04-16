@@ -34,11 +34,19 @@ public class Questao02b {
      * @param args
      */
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
+        No n0 = new No(2, null);
+        No n1 = new No(6, n0);
+        No n2 = new No(4, n1);
+        No n3 = new No(2, n2);
+        No n4 = new No(3, n3);
 
+        System.out.println("sem ciclo:" + verificaCiclo(n4));
+
+        n0.proximo = n2;
+        System.out.println("com ciclo:" + verificaCiclo(n4));
     }
 
-    public boolean verificaCiclo(No n) {
+    public static boolean verificaCiclo(No n) {
         return false;
     }
 }
