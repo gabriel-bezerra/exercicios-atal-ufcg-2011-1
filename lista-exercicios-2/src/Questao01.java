@@ -16,9 +16,9 @@
  * Comentário:
  * 
  * Para resolver o problema, devemos verificar triplas de elementos de V,
- * verificando se a soma deles dá x. No pior caso (quando a resposta é True),
+ * verificando se a soma deles dá x. No pior caso (quando a resposta é False),
  * qualquer que seja a forma de varrer a lista, devemos verificar todas as
- * triplas possíveis, resultando num custo O(n!). 
+ * triplas possíveis, resultando num custo O(n^3). 
  * 
  */
 
