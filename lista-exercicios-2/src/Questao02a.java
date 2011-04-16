@@ -20,7 +20,17 @@
 
 public class Questao02a {
 
-    /**
+	private static class No {
+		private int carga;
+		private No proximo;
+
+		private No(int carga, No proximo) {
+			this.carga = carga;
+			this.proximo = proximo;
+		}
+	}
+
+	/**
      * @param args
      */
     public static void main(String[] args) {
@@ -28,4 +38,7 @@ public class Questao02a {
 
     }
 
+    public boolean verificaCiclo(No n) {
+    	return false;
+    }
 }
