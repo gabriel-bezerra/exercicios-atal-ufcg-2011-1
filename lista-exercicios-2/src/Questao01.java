@@ -1,9 +1,33 @@
+/* 
+ * 1. Desenvolva um algoritmo verificaSoma(V,x) que receba uma lista de inteiros
+ *    (V) e outro valor inteiro (x) e retorne um booleano indicando se a soma de	
+ *    qualquer três números dessa lista é igual ao valor passado (x). Por fim,	
+ *    faça a análise do seu algoritmo quanto a memória e tempo. Exemplos:	
+ *    
+ *        verificaSoma([0,3,4,6,17], 23) = True.
+ *        verificaSoma([3,4,6,17], 30) = False.
+ *	
+ *    Observe que a resposta pode ser atingida de várias maneiras. Tanto somando
+ *    17+3+3, como 17+6+0. Logo, o mesmo numero pode ser somado duas vezes.
+ *	 
+ */
+
+/*
+ * Comentário:
+ * 
+ * Para resolver o problema, devemos verificar triplas de elementos de V,
+ * verificando se a soma deles dá x. No pior caso (quando a resposta é True),
+ * qualquer que seja a forma de varrer a lista, devemos verificar todas as
+ * triplas possíveis, resultando num custo O(n!). 
+ * 
+ */
+
 import java.util.Vector;
 
 /**
-*
-* @author Catharine
-*/
+ *
+ * @author Catharine
+ */
 public class Questao01 {
 
     public static void main(String[] args) {
