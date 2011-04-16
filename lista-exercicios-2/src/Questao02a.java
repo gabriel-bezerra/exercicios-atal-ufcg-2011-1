@@ -31,7 +31,7 @@ public class Questao02a {
 		}
 	}
 
-	/**
+    /**
      * @param args
      */
     public static void main(String[] args) {
