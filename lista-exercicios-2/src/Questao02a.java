@@ -23,6 +23,7 @@ public class Questao02a {
 	private static class No {
 		private int carga;
 		private No proximo;
+		private boolean visitado;
 
 		private No(int carga, No proximo) {
 			this.carga = carga;
@@ -39,6 +40,9 @@ public class Questao02a {
     }
 
     public boolean verificaCiclo(No n) {
-    	return false;
+    	if (n == null) {return false;}
+    	if (n.visitado) {return true;}
+    	n.visitado = true;
+    	return verificaCiclo(n.proximo);
     }
 }
