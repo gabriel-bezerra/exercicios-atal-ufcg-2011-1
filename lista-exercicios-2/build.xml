@@ -1,0 +1,211 @@
+<project name="Lista2-ATAL" basedir="." default="main">
+
+    <property name="src.dir"     value="src"/>
+    <property name="build.dir"   value="bin"/>
+
+    <target name="limpa">
+        <delete dir="${build.dir}" />
+    </target>
+
+    <target name="compila" depends="limpa">
+        <mkdir dir="${build.dir}" />
+        <javac
+            srcdir="${src.dir}"
+            destdir="${build.dir}"
+            />
+    </target>
+
+    <target name="Questao01" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao01"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao01Reul" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao01Reul"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao02a" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao02a"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao02aCatharine" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao02aCatharine"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao02b" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao02b"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao02bGabriel" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao02bGabriel"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao03" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao03"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao04" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao04"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao05" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao05"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao06" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao06"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao07" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao07"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao08" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao08"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao09" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao09"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao10" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao10"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao11" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao11"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao12" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao12"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao13" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao13"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao14" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao14"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao15" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao15"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao16" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao16"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao17" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao17"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao18" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao18"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao19" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao19"
+            fork="true">
+        </java>
+    </target>
+
+    <target name="Questao20" depends="compila">
+        <java
+            dir="${build.dir}"
+            classname="Questao20"
+            fork="true">
+        </java>
+    </target>
+
+</project>
+
