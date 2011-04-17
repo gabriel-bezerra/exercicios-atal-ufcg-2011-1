@@ -1,5 +1,5 @@
 /*
- * Questão 01
+ * Questão 03
  *
  * Desenvolva um algoritmo naoRepetido(String) que receba uma String como
  * entrada e retorne o primeiro caractere da String que não aparece duas vezes
