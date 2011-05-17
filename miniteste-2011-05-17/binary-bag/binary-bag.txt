@@ -1,0 +1,31 @@
+﻿Além do miniteste (no caso o código fonte das duas questões escolhidas), deve
+ser entregue uma pequena descrição da abordagem usada para resolver o problema.
+
+Que algoritmo foi utilizado?
+Por que essa abordagem funciona?
+Qual seu custo de espaço e tempo?
+Que modificações foram necessárias?
+
+
+// TODO: passar analisador ortográfico.
+
+SuperSale - http://uva.onlinejudge.org/external/101/10130.html
+
+Para resolver o problema, usei um algoritmo de resolução do problema da
+mochila binária implementado usando a técnica de programação dinâmica
+apresentada em aula.
+
+Programação dinâmica é adequada para resolver o problema porque ele é um
+problema de subestrutura ótima, ou seja, sua solução pode ser construida
+a partir de soluções ótimas para seus subproblemas. No caso, os subproblemas
+são: a presença ou ausência do item para cada peso máximo de mochila.
+Decidindo entre a melhor solução para cada subproblema, constroi-se, bottom-up,
+a solução do problema. Além disso, há bastante repetição de subproblemas.
+
+Não foi necessário realizar modificações no algoritmo que encontra o melhor
+valor de mochila para cada membro da família. Os resultados obtidos foram
+somados para construir o resultado de toda a família.
+
+Tanto o custo de tempo, como o de espaço do algoritmo implementado foi de
+Teta(N*G).
+
