@@ -8,7 +8,7 @@ int main() {
     int maximumAmount = 30000;
     int numberOfColumns = maximumAmount/5 + 1;
 
-    int count[numberOfColumns];
+    long long count[numberOfColumns];
 
     for (int j = 0; j < numberOfColumns; ++j) {
         count[j] = 1;
@@ -26,7 +26,8 @@ int main() {
     std::cin >> input;
     int amount = int (100 * input);
     while (amount != 0) {
-        printf("%6.2f%17d\n", input, count[amount/5]);
+        //printf("%6.2f%17ld\n", input, count[amount/5]);
+        printf("%6.2lf%17lld\n", input+1e-7, count[amount/5]);
 
         std::cin >> input;
         amount = int (100 * input);
