@@ -22,15 +22,15 @@ int main() {
         }
     }
 
-    float input;
-    std::cin >> input;
-    int amount = int (100 * input);
+    int a,b;
+    scanf("%d.%d",&a,&b);
+    int amount = a*100 + b;
     while (amount != 0) {
         //printf("%6.2f%17ld\n", input, count[amount/5]);
-        printf("%6.2lf%17lld\n", input+1e-7, count[amount/5]);
+        printf("%3d.%02d%17lld\n", amount/100, amount%100, count[amount/5]);
 
-        std::cin >> input;
-        amount = int (100 * input);
+        scanf("%d.%d",&a,&b);
+        amount = a*100 +b;
     }
 
     return 0;
