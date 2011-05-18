@@ -66,4 +66,6 @@ int main() {
 
         std::cout << familyTotal << std::endl;
     }
+
+    return 0;
 }
