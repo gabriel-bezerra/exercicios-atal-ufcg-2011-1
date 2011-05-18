@@ -1,0 +1,26 @@
+
+The jackpot - http://uva.onlinejudge.org/external/106/10684.html
+
+Para resolver o problema, resolvi as melhores sequências de apostas 0 até n
+usando programação dinâmica, através da seguinte recursão:
+
+Seja S[x] o máximo valor da sequência V[0]...V[x]. Podemos descrevê-lo como:
+
+S[x] = max(V[x], V[x] + V[x-1], V[x] + V[x-1] + V[x-2] +... , V[x] + V[x-1] +
+...  + V[0])
+
+S[x] = V[x] + max(0, V[x-1], V[x-1] + V[x-2] + ... , V[x-1] + ... + V[0])
+
+S[x] = V[x] + max(0, max(V[x-1], V[x-1] + V[x-2] + ... , V[x-1] + ... + V[0]))
+
+S[x] = V[x] + max(0, S[x-1])
+
+Depois, um algoritimo Teta(n) escolhe a máxima sequência 0..x encontrada, como a
+de maior valor que se pode obter.
+
+Parte da solução desse problema pode ser construida a partir de soluções ótimas
+para seus subproblemas S[x] para x pertencente a [0, n].
+
+Tanto o custo de tempo, como o de espaço do algoritmo implementado foi de
+Teta(n).
+
