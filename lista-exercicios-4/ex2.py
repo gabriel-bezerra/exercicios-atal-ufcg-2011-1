@@ -1,17 +1,37 @@
-WHITE = 0
-BLACK = 1
+from collections import deque
 
 class Node:
     def __init__(self, value):
         self.value = value
         self.left = None
         self.right = None
-        self.color = WHITE
 
     def __str__(self) : return self.value
 
+    def children(self):
+        return [x for x in (self.left, self.right) if x != None]
 
-def caminhaArvore(raiz) : pass
+
+def printQueue(queue):
+    for i in queue:
+        print i, " ",
+    print
+
+def caminhaArvore(raiz):
+    print raiz
+
+    queue = deque()
+    queue.append(raiz)
+
+    while len(queue) > 0:
+        node = queue.popleft()
+
+        littleQueue = deque()
+        for child in node.children():
+            littleQueue.append(child)
+
+        printQueue(littleQueue)
+        queue.extend(littleQueue)
 
 
 def teste():
