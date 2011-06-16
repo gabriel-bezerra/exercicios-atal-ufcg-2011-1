@@ -17,21 +17,19 @@ def printQueue(queue):
         print i, " ",
     print
 
+
 def caminhaArvore(raiz):
-    print raiz
+    nextLevel = deque()
+    nextLevel.append(raiz)
 
-    queue = deque()
-    queue.append(raiz)
+    while len(nextLevel) > 0:
+        printQueue(nextLevel)
 
-    while len(queue) > 0:
-        node = queue.popleft()
+        previousLevel = nextLevel
+        nextLevel = deque()
 
-        littleQueue = deque()
-        for child in node.children():
-            littleQueue.append(child)
-
-        printQueue(littleQueue)
-        queue.extend(littleQueue)
+        for node in previousLevel:
+            nextLevel.extend(node.children())
 
 
 def teste():
@@ -64,3 +62,4 @@ def teste():
     caminhaArvore(a)
 
 teste()
+
