@@ -7,6 +7,12 @@ def balde(M, x, y):
 
 
 def balde1(M, x, y, antigo):
+    # verifica se esta nos limites do array
+    if (x < 0 or x >= len(M)):
+        return
+    if (y < 0 or y >= len(M[x])):
+        return
+
     tinta = '-'
 
     if not M[x][y] == antigo:
@@ -18,10 +24,6 @@ def balde1(M, x, y, antigo):
     for i in [-1, 0, 1]:
         for j in [-1, 0, 1]:
 
-            # verifica se esta nos limites do array
-            if not (0 <= x + i < len(M) and
-                    0 <= y + j < len(M[x + i])):
-                return
 
             # conquista
             balde1(M, x + i, y + j, antigo)
